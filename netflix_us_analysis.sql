@@ -21,3 +21,6 @@ SELECT * FROM read_parquet('output/netflix_daily_top_10.parquet');
 -- Convert the CSV file to a Parquet file.
 COPY (FROM read_csv_auto('data/netflix_daily_top_10.csv'))
 TO 'output/converted_netflix_daily_top_10.parquet' (FORMAT PARQUET);
+
+-- Install the HTTPS extension.
+INSTALL https;
